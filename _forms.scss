@@ -1,0 +1,215 @@
+// label {
+//   font-size: 0.928571rem;
+//   font-weight: 700;
+//   margin-bottom: 0.357143rem;
+// }
+
+// small.form-text {
+//   font-size: 0.857143rem;
+// }
+
+// .input-group-prepend {
+//   border-bottom-left-radius: 0.214286rem;
+//   border-top-left-radius: 0.214286rem;
+//   margin-right: -0.071429rem;
+
+//   &.btn-addon {
+//     padding: 0;
+//     border: 0;
+//     border-bottom-left-radius: 0;
+//     border-top-left-radius: 0;
+
+//     .btn {
+//       border-bottom-right-radius: 0;
+//       border-top-right-radius: 0;
+//     }
+//   }
+// }
+
+// .input-group-append {
+//   border-bottom-right-radius: 0.214286rem;
+//   border-top-right-radius: 0.214286rem;
+//   margin-left: -0.071429rem;
+
+//   &.btn-addon {
+//     padding: 0;
+//     border: 0;
+//     border-bottom-right-radius: 0;
+//     border-top-right-radius: 0;
+
+//     .btn {
+//       border-bottom-left-radius: 0;
+//       border-top-left-radius: 0;
+//     }
+//   }
+// }
+
+// input[type="file"] {
+//   display: block;
+// }
+
+// .form-inline .form-group {
+//   margin-right: 0.5rem;
+// }
+
+// .form-group.row .col-form-label {
+//   text-align: left;
+//   @include media-breakpoint-up(md) {
+//     text-align: right;
+//   }
+// }
+
+// .form-group, .form-check {
+//   padding-bottom: 0.214rem;
+//   padding-top: 0.214rem;
+// }
+
+// @mixin form-validation-state-custom($state, $color, $icon) {
+//   .#{$state}-feedback {
+//     display: none;
+//     width: 100%;
+//     margin-top: $form-feedback-margin-top;
+//     @include font-size($form-feedback-font-size);
+//     color: $color;
+//   }
+
+//   .#{$state}-tooltip {
+//     position: absolute;
+//     top: 100%;
+//     z-index: 5;
+//     display: none;
+//     max-width: 100%;
+//     padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
+//     margin-top: .1rem;
+//     @include font-size($form-feedback-tooltip-font-size);
+//     line-height: $form-feedback-tooltip-line-height;
+//     color: #fff;
+//     background-color: rgba($color, $form-feedback-tooltip-opacity);
+//     @include border-radius($form-feedback-tooltip-border-radius);
+//   }
+
+//   .was-validated {
+//     .form-control {
+//       &:#{$state},
+//       .is-#{$state} {
+//         border-color: $color;
+
+//         @if $enable-validation-icons {
+//           background-image: escape-svg($icon);
+//           background-repeat: no-repeat;
+//           background-position: right $input-height-inner-quarter center;
+//           background-size: $input-height-inner-half $input-height-inner-half;
+//         }
+
+//         &:focus {
+//           border-color: $color;
+//           box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+//         }
+
+//         ~ .#{$state}-feedback,
+//         ~ .#{$state}-tooltip {
+//           display: block;
+//         }
+//       }
+//     }
+
+//     textarea.form-control{
+//       &:#{$state},
+//       .is-#{$state} {
+//         @if $enable-validation-icons {
+//           background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
+//         }
+//       }
+//     }
+
+//     .custom-select {
+//       &:#{$state},
+//       .is-#{$state} {
+//         border-color: $color;
+
+//         @if $enable-validation-icons {
+//           background: $custom-select-background, escape-svg($icon) $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
+//         }
+
+//         &:focus {
+//           border-color: $color;
+//           box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+//         }
+
+//         ~ .#{$state}-feedback,
+//         ~ .#{$state}-tooltip {
+//           display: block;
+//         }
+//       }
+//     }
+
+//     .form-check-input {
+//       &:#{$state},
+//      .is-#{$state} {
+//         ~ .form-check-label {
+//           color: $color;
+//         }
+
+//         ~ .#{$state}-feedback,
+//         ~ .#{$state}-tooltip {
+//           display: block;
+//         }
+//       }
+//     }
+
+//     .custom-control-input {
+//       &:#{$state},
+//       .is-#{$state} {
+//         ~ .custom-control-label {
+//           color: $color;
+
+//           &::before {
+//             border-color: $color;
+//           }
+//         }
+
+//         &:checked {
+//           ~ .custom-control-label::before {
+//             border-color: lighten($color, 10%);
+//             @include gradient-bg(lighten($color, 10%));
+//           }
+//         }
+
+//         &:focus {
+//           ~ .custom-control-label::before {
+//             box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+//           }
+
+//           &:not(:checked) ~ .custom-control-label::before {
+//             border-color: $color;
+//           }
+//         }
+
+//         ~ .#{$state}-feedback,
+//         ~ .#{$state}-tooltip {
+//           display: block;
+//         }
+//       }
+//     }
+
+//     .custom-file-input {
+//       &:#{$state},
+//       .is-#{$state} {
+//         ~ .custom-file-label {
+//           border-color: $color;
+//         }
+
+//         &:focus {
+//           ~ .custom-file-label {
+//             border-color: $color;
+//             box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+// @include form-validation-state-custom("valid", $form-feedback-valid-color, $form-feedback-icon-valid);
+// @include form-validation-state-custom("invalid", $form-feedback-invalid-color, $form-feedback-icon-invalid);

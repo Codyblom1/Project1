@@ -1,0 +1,57 @@
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .radio-group input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .radio-group input[type="radio"] + span {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+  }
+  .radio-group input[type="radio"]:checked + span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #ffc400; /* Color for the selected radio button */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+  /* Hover effect */
+  .radio-group label:hover input[type="radio"] + span {
+    border-color: #ffc400;
+  }
+
+
+.jumbotron-intro{
+    background-image: url("images/beer-walking-still.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.search-container {
+    position: relative;
+    background-image: url("images/beer-walking-still.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }

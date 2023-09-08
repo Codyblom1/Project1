@@ -1,0 +1,698 @@
+.App {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.moveSubtitle {
+
+  padding-bottom: 1em;
+  margin-top: 1em;
+}
+.profilePic {
+  height: 20px;
+  width: 20px;
+}
+.profileEditPic {
+  height: 300px;
+  width: 300px;
+}
+.loginHeader {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100%;
+
+}
+
+
+
+.search-container {
+  margin: right 900px;
+  position: relative;
+  background-image: url('images/drinking-beer.gif');
+  background-size:40px ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* width: 1400px; */
+  padding: 20px;
+  top: 75%;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.radio-group input[type="radio"] {
+  opacity: 100;
+  width: 20px;
+  height: 20px;
+}
+.radio-group input[type="radio"] + span {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(204, 204, 204);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.radio-group input[type="radio"]:checked + span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #ffc400; 
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+/* Hover effect */
+.radio-group label:hover input[type="radio"] + span {
+  border-color: #ffc400;
+}
+.welcome-homepage{
+  text-align: left;
+}
+
+
+.custom-navbar {
+  height: 80px;
+  width: 100%;
+  padding: 0 64px;
+ 
+}
+
+.bannerHeader {
+  /*#ffc400 == orange colour*/
+  background-color:#f7fafa ;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto; 
+}
+
+.brand-name{
+  display: inline-block;
+  margin-left: 10pt;
+  font-family: 'Lobster Two', cursive;;
+}
+
+.spread-out-links {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-words {
+  font-size: 15px;
+}
+
+.landingpage{
+  background-image: url("images/landingpage-pic.png");
+  /* width: 400px;
+  height: 50%;
+  bottom: 10px;  
+  top: 200px;
+  right: 700px; */
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.style-text{
+  
+  flex:1;
+  margin-top: 150px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+
+.homepage-style{
+  display: flex;
+  font-family: monospace;
+  text-align: center;
+  
+
+}
+
+h3{
+
+  display: block;
+  font-size: 75px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#under-header {
+  font-size: 75px;
+}
+
+
+.on-top{
+  vertical-align: top;
+}
+.reviewPageStyle {
+  font-family: cursive;
+  color: rgb(0, 0, 0);
+}
+/* used for text box in review */
+.textArea{
+  background-color: white;
+  background-size: 20%;
+  height: 300px;
+  resize: none;
+  border: 1px solid black;
+  /* background: linear-gradient(#FF9900, #FFFFFF); */
+    /* transition: background 2s ease; */
+}
+
+/* .textArea:hover{
+  background: linear-gradient(#FF9900, #FFFFFF);
+}
+.textArea::placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}  */
+.box {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  height: 60%;
+  /* max-height: 70vh; */
+  margin-top: calc(100vh - 85vh - 20px);
+  background:url('images/beer-10.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: -2px 5px 5px #000000;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  overflow: auto;
+}
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(24% - 8px);
+  top: calc(100vh - 85vh - 33px);
+  background: #EDEDED;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+.popup-box {
+  position: fixed;
+  z-index: 999;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+ 
+
+ 
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(24% - 8px);
+  top: calc(100vh - 85vh - 33px);
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+
+/* create new review form*/
+.box .create {
+  max-width: 60%;
+  
+  margin: 0 auto;
+  text-align: center;
+}
+
+.box .create label {
+  text-align: left;
+  display: block;
+}
+
+.box .create input, .create textarea {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.box .brewName {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+
+/* CSS */
+#genButton{
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+}
+
+#genButton:hover {
+  background-color: #f7fafa;
+}
+
+#genButton:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+
+#reviewButton {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 12px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+}
+
+#reviewButton:hover {
+  background-color: #f7fafa;
+}
+
+#reviewButton:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+
+
+
+
+/*Landing Page CSS*/
+
+
+/* 
+.layout {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}  */
+
+.main {
+  flex:1;
+  display: flex;
+  align-items: center;
+  padding: 0 0 200px 0;
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+  padding-left: 600px;
+}
+
+.right img {
+  width: 95%;
+}
+
+.left{
+  max-width: 45%;
+  padding: 50px 64px;
+  font-size: 49pt;
+  font-weight:650;
+}
+
+.right {
+  padding: 40px 48px;
+}
+
+.title-color {
+  color:#ffc400
+}
+
+.brewery-animation::before {
+  content: "Breweries";
+  position: absolute;
+  animation: animate infinite 8s;
+  padding-left: 16px;
+}
+
+@keyframes animate {
+
+  0% {
+      content: "Reviews";
+  }
+
+  50% {
+      content: "Favorites";
+  }
+
+  75% {
+      content: "Friends";
+  }
+}
+
+#landbutton {
+  border: none;
+  outline: none;
+  background-color: #fdb50c;
+  color: #fff;
+  padding: 18px 32px;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1),
+  0 15px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: opacity 0.9;
+}
+
+#landbutton:hover {
+  opacity: 0.9;
+}
+
+#landbutton2 {
+  border: none;
+  outline: none;
+  background-color: #fdb50c;
+  color: #fff;
+  padding: 18px 32px;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.9;
+}
+
+#landbutton2:hover {
+  opacity: 0.9;
+}
+
+.msg {
+  color: #60bdff;
+  font-size: 14pt;
+  font-weight: normal;
+  line-height: 50px;
+  margin-bottom: 2px;
+  margin-top: -10px;
+  z-index: -999;
+}
+
+
+@media (max-width: 800px) {
+  .main,
+  .left,
+  .right {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .left {
+    font-size: 35pt; 
+    width: 50%; 
+    text-align: center;
+  }
+
+
+  #landbutton {
+    max-width: 100%; 
+    margin-top: 25px; 
+  
+  }
+
+  .right img {
+    width: 100%;
+  }
+
+  .navbar-toggler{
+    position: absolute;
+    top: 10px;
+    right: 15px; 
+  }
+
+  #loggedin {
+    position: absolute;
+    left: 10pt;
+
+  }
+}
+
+/*Hero Section Landing Page*/
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#d5e1ff  ;
+  height: 50vh;
+  width: 100%;
+}
+/* review card styling */
+.brewerCardStylingFont {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+.card.btn {
+  background-color: #f2f2f2; /* This is a light gray color. Change to any color you desire */
+  /* Add other styles if needed, such as padding, margin, etc. */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.brewerCardStylingalign {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+
+.feat-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+}
+
+.col-2 {
+  position: relative;
+  flex: 2; 
+  text-align: left;
+  /* padding: 10px 10px 10px 100px; */
+  padding: 10vh;
+}
+
+.col-2{
+  position: relative;
+  padding-left: 10vh;
+  max-width: 100%; 
+}
+
+.search-text{
+  font-size: 35pt;
+  font-weight: bolder;
+  margin-left: 2.56rem;
+}
+
+.sec2format {
+  display: flex;
+  justify-content: left;
+  margin-left: 2.56rem;
+}
+
+.img-size{
+  height: 25vh;
+  width: auto;
+}
+
+#landbutton3 {
+  border: none;
+  outline: none;
+  background-color: #fdb50c;
+  color: #fff;
+  padding: 18px 32px;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.9;
+  margin-left: 2.56rem;
+
+}
+
+#landbutton3:hover {
+  opacity: 0.9;
+}
+
+#landbutton4 {
+  border: none;
+  outline: none;
+  background-color: #fdb50c;
+  color: #fff;
+  padding: 18px 32px;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.9;
+  margin-left: 0px;
+
+}
+
+#landbutton4:hover {
+  opacity: 0.9;
+}
+
+/* layout */
+.body-margin {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* buttons for brewerycard */
+#genButton2{
+  transition: background-color 0.3s ease;
+  background-color: #fff;
+  border: 1px solid #D5D9D9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0F1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 400px;
+}
+#genButton2:hover {
+  background-color: #FDB50C;
+}
+#genButton2:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}

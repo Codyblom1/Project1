@@ -1,0 +1,43 @@
+DROP TABLE IF EXISTS favorites;
+
+CREATE TABLE favorites (
+favorite_id SERIAL,
+brewery_id varchar(200) NOT NULL,
+user_id int NOT NULL,
+CONSTRAINT FK_favorites_user_user FOREIGN KEY(user_id) REFERENCES users(user_id)
+);
+
+insert into favorites
+      (brewery_id, user_id)
+Values ('06e9fffb-e820-45c9-b107-b52b51013e8f',3), -- multiple valuesmay be inserted with one insert
+	   ('701239cb-5319-4d2e-92c1-129ab0b3b440',3) 
+;
+Select * from favorites where user_id = 3;
+delete from favorites where user_id = 1 and brewery_id = 'b54b16e1-ac3b-4bff-a11f-f7ae9ddc27e0';
+Select * from favorites;
+Select * from users;
+
+
+
+DROP TABLE IF EXISTS reviews;
+
+CREATE TABLE reviews (
+	review_id SERIAL,
+	user_id int NOT NULL,
+	username varchar (200) NOT NULL,
+	brewery_id varchar(200) NOT NULL,
+	brewery_name varchar(200) NOT NULL,
+	brewery_url varchar(200),
+	review text NULL,
+	star_rating int NOT NULL,
+	posting_date date default current_date,
+
+CONSTRAINT FK_reviews_user_user FOREIGN KEY(user_id) REFERENCES users(user_id)
+);
+
+insert into reviews
+      (user_id, username, brewery_id, brewery_name, review, star_rating)
+Values (6, 'bobby','06e9fffb-e820-45c9-b107-b52b51013e8f','Cains Brew', 'It was amazing!', 5), -- multiple valuesmay be inserted with one insert
+	   (6, 'bobby','06e9fffb-e820-45c9-b107-b52b51013e8f','Cains Brew', 'It has become bad now. I am so sad.', 2) 
+;
+select * from reviews;
